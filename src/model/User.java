@@ -8,11 +8,21 @@ public abstract class User {
     private String passwordHash;
     private String fullName;
     private String email;
-    private String role;
+    private Role role;
     private LocalDateTime createdAt;
-    private String status;
+    private UserStatus userStatus;
 
-    public User(String id, String username, String passwordHash, String fullName, String email, String role, LocalDateTime createdAt, String status) {
+    // Fixed value for Role (using enum)
+    public enum Role {
+        BIDDER, SELLER, ADMIN
+    }
+
+    // Fixed value for userStatus (using enum)
+    public enum UserStatus {
+        ACTIVE, INACTIVE, BANNED
+    }
+
+    public User(String id, String username, String passwordHash, String fullName, String email, Role role, LocalDateTime createdAt, UserStatus userStatus) {
         this.id = id;
         this.username = username;
         this.passwordHash = passwordHash;
@@ -20,7 +30,7 @@ public abstract class User {
         this.email = email;
         this.role = role;
         this.createdAt = createdAt;
-        this.status = status;
+        this.userStatus = userStatus;
     }
 
     public String getId() {
@@ -63,11 +73,11 @@ public abstract class User {
         this.email = email;
     }
 
-    public String getRole() {
+    public Role getRole() {
         return this.role;
     }
 
-    public void setRole(String role) {
+    public void setRole(Role role) {
         this.role = role;
     }
 
@@ -79,12 +89,12 @@ public abstract class User {
         this.createdAt = createdAt;
     }
 
-    public String getStatus() {
-        return this.status;
+    public UserStatus getUserStatus() {
+        return this.userStatus;
     }
 
-    public void setStatus(String status) {
-        this.status = status;
+    public void setUserStatus(UserStatus userStatus) {
+        this.userStatus = userStatus;
     }
 
     public void login() {
