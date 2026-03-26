@@ -1,9 +1,12 @@
+import java.time.LocalDateTime;
+
 abstract class User {
     protected String id;
-    protected String name;
+    protected String username;
+    protected String password;
+    protected String email;
+    protected String role;
+    protected LocalDateTime createdAt;
+    protected boolean isActive;
 
-    public User(String id, String name) {
-        this.id = id;
-        this.name = name;
-    }
 }
