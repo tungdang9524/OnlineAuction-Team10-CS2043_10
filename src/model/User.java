@@ -4,26 +4,29 @@ import java.time.LocalDateTime;
 abstract class User {
     protected String id;
     protected String username;
-    protected String password;
+    protected String passwordHash;
+    protected String fullName;
     protected String email;
     protected String role;
     protected LocalDateTime createdAt;
-    protected boolean isActive;
-    protected double balance;
+    protected String status;
 
-    public User(String id, String username, String password, String email, String role, LocalDateTime createdAt, boolean isActive, double balance) {
+    public User(String id, String username, String passwordHash, String email, String role, LocalDateTime createdAt, String status) {
         this.id = id;
         this.username = username;
-        this.password = password;
+        this.passwordHash = passwordHash;
         this.email = email;
         this.role = role;
         this.createdAt = createdAt;
-        this.isActive = isActive;
-        this.balance = balance;
+        this.status = status;
     }
 
-    public String getUsername() {
-        return this.username;
+    public String getId() {
+        return this.id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public void login() {
