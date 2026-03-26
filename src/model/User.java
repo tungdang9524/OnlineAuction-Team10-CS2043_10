@@ -12,16 +12,6 @@ public abstract class User {
     private LocalDateTime createdAt;
     private UserStatus userStatus;
 
-    // Fixed value for Role (using enum)
-    public enum Role {
-        BIDDER, SELLER, ADMIN
-    }
-
-    // Fixed value for userStatus (using enum)
-    public enum UserStatus {
-        ACTIVE, INACTIVE, BANNED
-    }
-
     public User(String id, String username, String passwordHash, String fullName, String email, Role role, LocalDateTime createdAt, UserStatus userStatus) {
         this.id = id;
         this.username = username;
