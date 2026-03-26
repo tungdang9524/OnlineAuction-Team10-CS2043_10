@@ -25,4 +25,12 @@ abstract class User {
         return this.username;
     }
 
+    public void login() {
+        System.out.println(this.username + "logged in.");
+    }
+
+    public void logout() {
+        System.out.println(this.username + "logged out.");
+    }
+
 }
