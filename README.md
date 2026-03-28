@@ -7,3 +7,6 @@ Deadline/yêu cầu của các tuần: https://docs.google.com/document/d/10h_yi
 Nguyễn Ngọc Long - đã kết nối Git thành công
 
 Nguyễn Đức Phong - đã kết nối Git thành công
+
+Ngô Văn Bảo Minh - đã kết nối Git thành công
+
