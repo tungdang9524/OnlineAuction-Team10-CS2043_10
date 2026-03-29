@@ -1,4 +1,10 @@
-.vscode/
-bin/
-out/
+/target/
+**/target/
 *.class
+*.jar
+*.war
+*.log
+.idea/
+*.iml
+.vscode/
+.DS_Store
