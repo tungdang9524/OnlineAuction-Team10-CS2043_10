@@ -17,3 +17,12 @@ UI: JavaFX + FXML
 Test: JUnit 5
 
 Data giai đoạn đầu: in-memory, tuần sau nối DB
+
+Cách chạy:
+
+mvn clean compile
+cd server
+mvn exec:java "-Dexec.mainClass=com.auction.server.ServerApp"
+(Tab mới)
+cd client
+mvn exec:java "-Dexec.mainClass=com.auction.client.App"
