@@ -2,11 +2,11 @@
 
 Deadline/yêu cầu của các tuần: https://docs.google.com/document/d/10h_yi4x5tVvtm_yBHK33yzg4sSSWJQ2RazJdFe6nEBs/
 
-Đặng Sơn Tùng - đã kết nối Git thành công
-
-Nguyễn Ngọc Long - đã kết nối Git thành công
-
-Nguyễn Đức Phong - đã kết nối Git thành công
-
-Ngô Văn Bảo Minh - đã kết nối Git thành công
-
+Kiến trúc tổng thể: Client–Server
+Phía client: MVC
+Giao tiếp: Socket TCP + JSON
+Build tool: Maven
+Ngôn ngữ: Java 17
+UI: JavaFX + FXML
+Test: JUnit 5
+Data giai đoạn đầu: in-memory, tuần sau nối DB
