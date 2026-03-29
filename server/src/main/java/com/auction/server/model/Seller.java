@@ -1,4 +1,7 @@
-package model;
+package com.auction.server.model;
+
+import com.auction.shared.enums.Role;
+import com.auction.shared.enums.UserStatus;
 
 import java.time.LocalDateTime;
 
