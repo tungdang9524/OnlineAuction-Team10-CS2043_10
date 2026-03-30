@@ -30,10 +30,6 @@ public abstract class User {
         return this.id;
     }
 
-    public void setId(String id) {
-        this.id = id;
-    }
-
     public String getUsername() {
         return this.username;
     }
@@ -70,16 +66,8 @@ public abstract class User {
         return this.role;
     }
 
-    public void setRole(Role role) {
-        this.role = role;
-    }
-
     public LocalDateTime getCreatedAt() {
         return this.createdAt;
-    }
-
-    public void setCreatedAt(LocalDateTime createdAt) {
-        this.createdAt = createdAt;
     }
 
     public UserStatus getUserStatus() {
