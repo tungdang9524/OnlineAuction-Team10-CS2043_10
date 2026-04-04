@@ -32,3 +32,35 @@ mvn exec:java "-Dexec.mainClass=com.auction.server.ServerApp"
 cd client
 
 mvn exec:java "-Dexec.mainClass=com.auction.client.App"
+## ERD tuần 1
+
+```text
++------------------+
+|      users       |
++------------------+
+| id (PK)          |
+| username         |
+| password_hash    |
+| full_name        |
+| email            |
+| role             |
+| user_status      |
+| created_at       |
++------------------+
+
+        1
+        |
+        |
+        n
+
++------------------+
+|      items       |
++------------------+
+| id (PK)          |
+| seller_id (FK)   |
+| name             |
+| description      |
+| starting_price   |
+| created_at       |
++------------------+
+```
