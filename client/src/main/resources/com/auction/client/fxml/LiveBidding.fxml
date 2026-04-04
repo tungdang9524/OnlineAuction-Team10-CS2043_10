@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: #f4f4f4; -fx-padding: 20;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.auction.client.controller.LiveBiddingController">
+    <top>
+        <Label text="🔴 PHÒNG ĐẤU GIÁ TRỰC TIẾP" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #c0392b; -fx-padding: 0 0 20 0;" BorderPane.alignment="CENTER"/>
+    </top>
+
+    <center>
+        <HBox spacing="20">
+            <VBox spacing="15" HBox.hgrow="ALWAYS" style="-fx-background-color: white; -fx-background-radius: 10; -fx-padding: 20; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 5);">
+
+                <StackPane style="-fx-background-color: #2c3e50; -fx-background-radius: 8; -fx-pref-height: 400;">
+                    <Label text="(Khu vực Livestream / Ảnh Sản Phẩm Trực Tiếp)" style="-fx-text-fill: white; -fx-font-size: 16px;"/>
+                </StackPane>
+
+                <Label text="Sản phẩm: Lư Hương Đồng Cổ Thế Kỷ 18" style="-fx-font-size: 22px; -fx-font-weight: bold;"/>
+                <Label text="Giá dẫn đầu hiện tại:" style="-fx-font-size: 16px; -fx-text-fill: gray;"/>
+                <Label text="25,500,000 VNĐ (User_Vip88)" style="-fx-font-size: 32px; -fx-font-weight: bold; -fx-text-fill: #27ae60;"/>
+            </VBox>
+
+            <VBox spacing="15" prefWidth="350" style="-fx-background-color: white; -fx-background-radius: 10; -fx-padding: 20; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 5);">
+                <Label text="Lịch sử trả giá &amp; Chat" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+
+                <ListView fx:id="bidHistoryList" VBox.vgrow="ALWAYS" style="-fx-background-radius: 5; -fx-border-radius: 5;"/>
+
+                <HBox spacing="10">
+                    <TextField fx:id="liveBidField" promptText="Nhập mức giá..." HBox.hgrow="ALWAYS" style="-fx-pref-height: 45; -fx-font-size: 14px; -fx-background-radius: 5;"/>
+                    <Button fx:id="btnLiveBid" text="ĐẶT GIÁ" style="-fx-background-color: #d35400; -fx-text-fill: white; -fx-font-weight: bold; -fx-pref-height: 45; -fx-cursor: hand; -fx-background-radius: 5;"/>
+                </HBox>
+            </VBox>
+        </HBox>
+    </center>
+</BorderPane>
