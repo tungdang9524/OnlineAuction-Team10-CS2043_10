@@ -5,8 +5,7 @@ import com.auction.shared.enums.UserStatus;
 
 import java.time.LocalDateTime;
 
-public abstract class User {
-    private String id;
+public abstract class User extends Entity {
     private String username;
     private String passwordHash;
     private String fullName;
@@ -16,7 +15,7 @@ public abstract class User {
     private UserStatus userStatus;
 
     public User(String id, String username, String passwordHash, String fullName, String email, Role role, LocalDateTime createdAt, UserStatus userStatus) {
-        this.id = id;
+        super(id);
         this.username = username;
         this.passwordHash = passwordHash;
         this.fullName = fullName;
@@ -26,9 +25,6 @@ public abstract class User {
         this.userStatus = userStatus;
     }
 
-    public String getId() {
-        return this.id;
-    }
 
     public String getUsername() {
         return this.username;

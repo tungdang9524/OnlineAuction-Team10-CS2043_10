@@ -1,7 +1,6 @@
 package com.auction.server.model;
 import java.time.LocalDateTime;
-public class Item {
-    private String id;
+public class Item extends Entity {
     private Seller seller;
     private String name;
     private String description;
@@ -9,17 +8,13 @@ public class Item {
     private LocalDateTime createdAt;
     public Item(String id, Seller seller, String name, String description,
                 double startingPrice, LocalDateTime createdAt) {
-        this.id = id;
+        super(id);
         this.seller = seller;
         this.name = name;
         this.description = description;
         this.startingPrice = startingPrice;
         this.createdAt = createdAt;
     }
-    public String getId() {
-        return id;
-    }
-
     public Seller getSeller() {
         return seller;
     }
