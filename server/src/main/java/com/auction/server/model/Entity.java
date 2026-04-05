@@ -1,0 +1,20 @@
+package com.auction.server.model;
+
+public abstract class Entity {
+    private String id;
+
+    protected Entity() {
+    }
+
+    protected Entity(String id) {
+        this.id = id;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+}
